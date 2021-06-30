@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- * Materialize CSS -->
+    <link rel="stylesheet" href="/css/materialize.css">
+    <title>MySql Express</title>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <thead>
+          <td>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>PassWord</th>
+            <th>Email</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% data.forEach((item) => { %>
+            <tr>
+              <td><%= item.nombre %></td>
+              <td><%= item.apellido %></td>
+              <td><%= item.contrasena %></td>
+              <td><%= item.email %></td>
+              <td><%= item.estado %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- * Materialize JS -->
+    <script src="/js/materialize.min.js"></script>
+  </body>
+</html>
